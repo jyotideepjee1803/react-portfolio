@@ -1,0 +1,181 @@
+:root {
+  --pC: hsl(185, 100%, 51%);
+  --primaryHover: hsl(185,92%,41%);
+  --secondaryColor: rgb(150,162,188);
+  --paragrapthColor: rgb(127,127,175);
+  --BgColor: #031a30;
+  --formColor: rgb(2,15,29);
+  --projectCardColor: #072340;
+  --textColor: #dae4fb;
+  --headerHeight: 3rem;
+  --g1: #f2f2f5;
+  --g2: #00d4ff;
+  --g3: #090979;
+}
+
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.about .sectionContent .textSection h4 {
+  color: var(--secondaryColor);
+  font-size: 1.1rem;
+  max-width: 100%;
+  letter-spacing: 1px;
+  font-weight: 500;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+.about .sectionContent .textSection .profileGroup .generalProfile {
+  margin-top: 1rem;
+  display: grid;
+  align-items: left;
+  grid-template-columns: repeat(2, 4rem);
+}
+.about .sectionContent .textSection .profileGroup .generalProfile .singleProfile .iconBox {
+  position: relative;
+  height: 70px;
+  width: 50px;
+  align-items: center;
+  background: var(--projectCardColor);
+  border: 2px solid var(--secondaryColor);
+  justify-content: center;
+  border-radius: 3rem;
+  overflow: hidden;
+  z-index: 500;
+}
+.about .sectionContent .textSection .profileGroup .generalProfile .singleProfile a {
+  z-index: 1000;
+}
+.about .sectionContent .textSection .profileGroup .generalProfile .singleProfile a .icon {
+  color: var(--textColor);
+  font-size: 28px;
+}
+.about .sectionContent .textSection .profileGroup .generalProfile .iconBox::before {
+  content: "";
+  height: 0;
+  width: 100%;
+  background: var(--primaryHover);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: 0.2s;
+}
+.about .sectionContent .textSection .profileGroup .generalProfile .iconBox::after {
+  content: "";
+  height: 0;
+  width: 100%;
+  background: var(--BgColor);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: 0.5s;
+}
+.about .sectionContent .textSection .profileGroup .generalProfile .iconBox:hover {
+  color: var(--textColor);
+  border: 2px solid var(--pC);
+}
+.about .sectionContent .textSection .profileGroup .generalProfile .iconBox:hover a .icon {
+  color: var(--pC);
+}
+.about .sectionContent .textSection .profileGroup .generalProfile .iconBox:hover::before, .about .sectionContent .textSection .profileGroup .generalProfile .iconBox:hover::after {
+  height: 100%;
+}
+.about .sectionContent .textSection .aboutBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  background: var(--pC);
+  width: -moz-max-content;
+  width: max-content;
+  padding: 10px 15px;
+}
+.about .sectionContent .textSection .aboutBtn:hover {
+  background: var(--pC);
+}
+.about .sectionContent .textSection .aboutBtn a {
+  color: var(--projectCardColor);
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  gap: 0.5rem;
+}
+.about .sectionContent .textSection .aboutBtn a:hover {
+  color: var(--textColor);
+}
+.about .sectionContent .aboutImgDiv {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  margin: 2rem auto 3rem;
+  border-radius: 50%;
+  overflow: hidden;
+  display: grid;
+  border: 2px solid var(--pC);
+  background: var(--g3);
+}
+.about .sectionContent .aboutImgDiv .aboutImg {
+  width: 250px;
+  align-self: center;
+  justify-self: center;
+}
+.about .sectionContent .aboutImgDiv:hover {
+  animation: bounce 1s linear;
+}
+.about .sectionContent .aboutImgDiv::before, .about .sectionContent .aboutImgDiv::after {
+  content: "";
+  inset: -0.5rem;
+  position: absolute;
+  z-index: -1;
+  background: conic-gradient(from var(--gradient-angle), var(--g1), var(--g2), var(--g3));
+  border-radius: inherit;
+  animation: rotation 20s linear infinite;
+}
+.about .sectionContent .aboutImgDiv::after {
+  filter: blur(3.5rem);
+}
+@keyframes rotation {
+  0% {
+    --gradient-angle:0deg;
+  }
+  100% {
+    --gradient-angle:360deg;
+  }
+}
+@keyframes bounce {
+  20%, 50%, 80%, to {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  70% {
+    transform: translateY(-15px);
+  }
+  90% {
+    transform: translateY(-4px);
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .about {
+    width: 70%;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 960px) {
+  .about .sectionContent {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 1240px) {
+  .about .sectionContent .textSection h4 {
+    font-size: 1.2rem;
+  }
+}/*# sourceMappingURL=about.css.map */
