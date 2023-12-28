@@ -1,7 +1,8 @@
 import React,{useEffect} from "react";
 import './projects.css';
-import img from '../../assets/Blogging_home.png';
-import img2 from '../../assets/Tours.png';
+import img from '../../assets/Chat.png';
+import img2 from '../../assets/Crypto.png'
+import img3 from '../../assets/Tours.png';
 import {FiGithub} from "react-icons/fi";
 
 import Aos from 'aos';
@@ -11,18 +12,30 @@ const data=[
     {
         id: 1,
         image: img,
-        github: 'https://github.com/jyotideepjee1803/Blog_site',
-        livelink: 'https://github.com/jyotideepjee1803/Blog_site',
-        title: 'Blog Site',
-        desc: 'Blog site desgined for the users to contribute their thoughts and read other blogs',
+        github: 'https://github.com/jyotideepjee1803/Baat',
+        livelink: 'https://baat-chat-app.onrender.com',
+        title: 'Baat',
+        desc: 'MERN Stack Chat-app with features of one-to-one chatting, group chatting as well as share all types of document along with text',
         tech1: 'Node',
         tech2: 'Express',
-        tech3: 'Javascript',
-        tech4: ''
+        tech3: 'MongoDB',
+        tech4: 'React',
+        tech5: 'Socket.io'
     },
     {
         id: 2,
         image: img2,
+        github: 'https://github.com/jyotideepjee1803/crypto_tracker',
+        livelink: 'https://crypto-tracer-site.netlify.app/',
+        title: 'Coin Tracer',
+        desc: 'Crypto currency tracking application with visual graphs and charts for representing current statistics of different currencies',
+        tech1: 'React',
+        tech2: 'REST API',
+        tech3: 'CSS',
+    },
+    {
+        id: 3,
+        image: img3,
         github: 'https://github.com/jyotideepjee1803/Tours_travels_template',
         livelink: 'https://jyotideep-tour-design.netlify.app/',
         title: 'Tours and Travels',
@@ -32,18 +45,7 @@ const data=[
         tech3: 'Javascript',
         tech4: 'HTML CSS'
     },
-    // {
-    //     id: 3,
-    //     image: img,
-    //     github: 'https://github.com/jyotideepjee1803/Blog_site',
-    //     livelink: '',
-    //     title: 'Blog Site',
-    //     desc: 'Blog site desgined for the users to contribute their thoughts and read other blogs',
-    //     tech1: 'Node',
-    //     tech2: 'Express',
-    //     tech3: 'Javascript',
-    //     tech4: ''
-    // }
+    
 ]
 
 
@@ -61,13 +63,13 @@ function Projects(){
                 </h5>
             </div>
 
-            <div data-aos = "fade-up" className="projectContainer grid">
+            <div data-aos = "fade-up" className="projectContainer grid" title="Click to see live project">
                 {
-                    data.map(({id,github,image,livelink,desc,title,tech1,tech2,tech3,tech4})=>{
+                    data.map(({id,github,image,livelink,desc,title,tech1,tech2,tech3,tech4,tech5})=>{
                         return(
                             <div key={id} className="singleProject">
                                 <div>
-                                <div className="extlinks flex">
+                                <div className="extlinks flex" title="Click to see github repo">
                                     <div className="githubIcon">
                                         <a href={github} target="_blank" rel="noreferrer" >
                                             <FiGithub className="icon"/>
@@ -94,6 +96,7 @@ function Projects(){
                                     <small>{tech2}</small>
                                     <small>{tech3}</small>
                                     <small>{tech4}</small>
+                                    <small>{tech5}</small>
                                 </div>
                                 </div>
                             </div>
