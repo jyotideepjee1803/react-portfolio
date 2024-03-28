@@ -93,7 +93,7 @@ function Projects(){
 
                                 <div className="imgDiv">
                                     <a href={livelink} target="_blank" rel="noreferrer">
-                                        <chatImg src={image} alt={title}/>
+                                        <img src={image} alt={title}/>
                                     </a>
                                 </div>
 
