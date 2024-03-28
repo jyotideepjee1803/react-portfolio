@@ -13,6 +13,7 @@
 .projects .projectContainer {
   justify-content: space-between;
   grid-template-columns: repeat(1, 1fr);
+  grid-row-gap: 30px;
 }
 .projects .projectContainer .singleProject {
   display: grid;
@@ -22,6 +23,9 @@
   border-radius: 10px;
   height: 100%;
   background: var(--projectCardColor);
+}
+.singleProject{
+  margin-top: 1rem;
 }
 .projects .projectContainer .singleProject .extlinks {
   width: 100%;
