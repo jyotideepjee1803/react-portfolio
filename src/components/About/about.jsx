@@ -52,7 +52,7 @@ const About = () => {
                     </div>
                     </div>
                     <div data-aos ="fade-up" data-aos-duration="3000" className="aboutBtn">
-                        <a href="CV.pdf" download="CV.pdf" className="flex">
+                        <a href="https://drive.google.com/file/d/1RNcYTt6CyirTo755K2FzQrfmC9Knz_yF/view?usp=sharing" download="CV.pdf" target="_blank" rel="noreferrer" className="flex">
                             Download CV <TbCloudDownload className="icon"/>
                         </a>
                     </div>

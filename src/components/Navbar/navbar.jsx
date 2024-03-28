@@ -54,10 +54,6 @@ function Navbar(){
                             <span className="headerNumber">4</span> <span>Contact</span>
                         </a>
                     </li>
-
-                    <button className="btn">
-                            <a href="CV.pdf" download="CV">RESUME</a>
-                    </button>
                 </ul>
 
                 <div onClick={hideNav} className="closeNavbar">

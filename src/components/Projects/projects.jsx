@@ -1,8 +1,9 @@
 import React,{useEffect} from "react";
 import './projects.css';
-import img from '../../assets/Chat.png';
-import img2 from '../../assets/Crypto.png'
-import img3 from '../../assets/Tours.png';
+import chatImg from '../../assets/Chat.png';
+import cryptoImg from '../../assets/Crypto.png'
+import tourImg from '../../assets/Tours.png';
+import messyImg from '../../assets/Messy.png';
 import {FiGithub} from "react-icons/fi";
 
 import Aos from 'aos';
@@ -11,7 +12,20 @@ import 'aos/dist/aos.css';
 const data=[
     {
         id: 1,
-        image: img,
+        image: messyImg,
+        github: 'https://github.com/jyotideepjee1803/Messy',
+        livelink: 'https://messy.vercel.app/',
+        title: 'Messy',
+        desc: 'A canteen coupon management system made with MERN stack to facilitate seamless management of meal coupons for both student and vendor as well as easy payment.',
+        tech1: 'Node',
+        tech2: 'Express',
+        tech3: 'MongoDB',
+        tech4: 'React',
+        tech5: 'Razorpay'
+    },
+    {
+        id: 2,
+        image: chatImg,
         github: 'https://github.com/jyotideepjee1803/Baat',
         livelink: 'https://baat-chat-app.onrender.com',
         title: 'Baat',
@@ -23,8 +37,8 @@ const data=[
         tech5: 'Socket.io'
     },
     {
-        id: 2,
-        image: img2,
+        id: 3,
+        image: cryptoImg,
         github: 'https://github.com/jyotideepjee1803/crypto_tracker',
         livelink: 'https://crypto-tracer-site.netlify.app/',
         title: 'Coin Tracer',
@@ -34,8 +48,8 @@ const data=[
         tech3: 'CSS',
     },
     {
-        id: 3,
-        image: img3,
+        id: 4,
+        image: tourImg,
         github: 'https://github.com/jyotideepjee1803/Tours_travels_template',
         livelink: 'https://jyotideep-tour-design.netlify.app/',
         title: 'Tours and Travels',
@@ -79,7 +93,7 @@ function Projects(){
 
                                 <div className="imgDiv">
                                     <a href={livelink} target="_blank" rel="noreferrer">
-                                        <img src={image} alt={title}/>
+                                        <chatImg src={image} alt={title}/>
                                     </a>
                                 </div>
 
