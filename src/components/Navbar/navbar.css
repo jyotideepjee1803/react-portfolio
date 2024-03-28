@@ -1,0 +1,156 @@
+:root {
+  --pC: hsl(185, 100%, 51%);
+  --primaryHover: hsl(185,92%,41%);
+  --secondaryColor: rgb(150,162,188);
+  --paragrapthColor: rgb(127,127,175);
+  --BgColor: #031a30;
+  --formColor: rgb(2,15,29);
+  --projectCardColor: #072340;
+  --textColor: #dae4fb;
+  --headerHeight: 3rem;
+}
+
+.header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--headerHeight);
+  width: 100%;
+  padding: 2rem;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(2, 15, 29, 0.242);
+}
+.header .logo a {
+  color: var(--textColor);
+  font-weight: 600;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+.header .logo a .icon {
+  font-size: 25px;
+  color: var(--pC);
+  transform: translateY(5px);
+}
+@media screen and (max-width: 768px) {
+  .header .navBar {
+    position: absolute;
+    background: var(--projectCardColor);
+    height: -moz-max-content;
+    height: max-content;
+    width: 80%;
+    border-radius: 1rem;
+    top: -500rem;
+    left: 50%;
+    padding: 1rem;
+    transform: translate(-50%);
+    z-index: 2000;
+    box-shadow: 0 2px 4px rgba(2, 15, 29, 0.904);
+    transition: 0.3s ease-in-out;
+  }
+  .header .navBar .navLists {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+    padding: 0.5rem 0;
+  }
+  .header .navBar .navLists .navItem {
+    padding: 0.5rem 0;
+  }
+  .header .navBar .navLists .navItem .navLink {
+    color: var(--textColor);
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  .header .navBar .navLists .navItem .navLink:hover {
+    color: var(--pC);
+  }
+  .header .navBar .navLists .navItem .navLink .headerNumber {
+    color: var(--pC);
+  }
+  .header .navBar .navLists .btn {
+    margin-top: 1rem;
+    z-index: 500;
+  }
+  .header .navBar .navLists .btn a {
+    font-weight: 600;
+    color: var(--textColor);
+    z-index: 2000;
+  }
+  .header .navBar .closeNavbar {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+  }
+  .header .navBar .closeNavbar:hover {
+    color: var(--pC);
+  }
+  .header .activeNavbar {
+    top: 7rem;
+  }
+}
+.header .toggleNavbar .icon {
+  font-size: 25px;
+  color: var(--pC);
+}
+.header .toggleNavbar:hover.icon {
+  color: var(--primaryHover);
+}
+
+.activeHeader {
+  background-color: var(--projectCardColor);
+  box-shadow: 0 2px 4px rgba(1, 15, 29, 0.904);
+}
+
+@media screen and (min-width: 769px) {
+  .toggleNavbar, .closeNavbar {
+    display: none;
+  }
+  .header {
+    padding: 1.5rem 2rem;
+  }
+  .header .navBar .navLists {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+  .header .navBar .navLists .navItem .navLink {
+    padding: 0 0.4rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--textColor);
+  }
+  .header .navBar .navLists .navItem .navLink:hover {
+    color: var(--pC);
+  }
+  .header .navBar .navLists .btn {
+    margin-left: 1rem;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+  }
+  .header .navBar .navLists .btn a {
+    color: var(--textColor);
+    font-weight: 500;
+  }
+}
+@media screen and (min-width: 960px) {
+  .header {
+    padding: 1.5rem 1.5rem;
+  }
+  .header .navBar .navLists {
+    padding: 0 2rem;
+  }
+  .header .navBar .navLists .navItem {
+    padding: 0 2rem;
+  }
+}
+@media screen and (min-width: 1240px) {
+  .header {
+    padding: 1rem 8.4rem;
+  }
+}/*# sourceMappingURL=navbar.css.map */

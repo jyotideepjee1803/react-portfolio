@@ -1,0 +1,129 @@
+:root{
+    --pC: hsl(185, 100%, 51%);
+    --primaryHover : hsl(185,92%,41%);
+    --secondaryColor : rgb(150,162,188);
+    --paragrapthColor : rgb(127,127,175);
+    --BgColor :  #031a30;
+    --formColor : rgb(2,15,29);
+    --projectCardColor : #072340;
+    --textColor : #dae4fb;
+    --headerHeight : 3rem;
+}
+
+.projects{
+    .projectContainer{
+        justify-content: space-between;
+        grid-template-columns: repeat(1,1fr);
+
+
+        .singleProject{
+            display: grid;
+            margin: .8rem;
+            margin-bottom: .5rem;
+            padding: 1.5rem;
+            border-radius: 10px;
+            height: 100%;
+            background: var(--projectCardColor);
+            .extlinks{
+                width: 100%;
+                .githubIcon{
+                    a{
+                        color: var(--pC);
+                        &:hover{
+                            color: var(--primaryHover);
+                        }
+                    }
+                }
+            }
+
+            &:hover{
+                transform: translateY(-7px);
+                border-bottom: 2px solid var(--pC);
+            }
+
+            .imgDiv{
+                height: 150px;
+                width: auto;
+                border-radius: 5px;
+                overflow: hidden;
+                cursor: pointer;
+
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    border-radius: 5px;
+                }
+            }
+
+            .projectTitle{
+                display: flex;
+                font-weight: 600;
+                color: var(--textColor);
+            }
+
+            .desc{
+                font-weight: 600;
+                color: var(--secondaryColor);
+            }
+
+            .technologies{
+                margin-top: .3rem;
+                gap: .5rem;
+                justify-content: flex-end;
+                small{
+                    color: var(--secondaryColor);
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+
+//media queries
+@media screen and (min-width: 600px){
+    .projects{
+        .projectContainer{
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+}
+
+@media screen and (min-width: 769px){
+    .projects{
+        width: 70%;
+        margin: auto;
+        .projectContainer{
+            grid-template-columns: repeat(2,1fr);
+        }
+    }
+}
+
+@media screen and (min-width: 1150px){
+    .projects{
+        .projectContainer{
+            grid-template-columns: repeat(2,1fr);
+
+            .singleProject{
+                .desc{
+                    font-size: 17px;
+
+                    .technologies{
+                        small{
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 1240px){
+    .projects{
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
